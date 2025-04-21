@@ -89,6 +89,7 @@ section:nth-of-type(even) {
     background-color: #ffffff; /* White for even sections */
 }
 
+
 /* Section Heading Styles */
 section h2 {
     font-size: 3rem;
@@ -110,6 +111,7 @@ section h2::after {
     transform: translateX(-50%);
     border-radius: 2px;
 }
+
 
 /* About Section */
 #about-section {
@@ -182,6 +184,7 @@ section h2::after {
     transform: scale(1.2);
     transition: transform 0.3s, color 0.3s;
 }
+
 
 /* Projects Section */
 #projects-section {
@@ -264,6 +267,7 @@ section h2::after {
     font-weight: 300;
     color: #494a4a;
 }
+
 
 /* Skills Section */
 #skills-section {
@@ -355,19 +359,24 @@ section h2::after {
     margin: 2rem 0;
 }
 
+
 /*Course Section*/
+
 #course-section > div:first-of-type {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 6rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2rem;
 }
 
 #course-section .experiences-types {
+    flex: 1 1 45%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    gap: 3rem 0;
-    flex: 1;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
 }
 
 #course-section .experiences-types i {
@@ -403,8 +412,8 @@ section h2::after {
     font-size: 1.1rem;
 }
 
-/*Analysis Section*/
 
+/*Analysis Section*/
 #analysis-section > div:first-of-type {
     display: flex;
     flex-direction: row;
@@ -445,6 +454,7 @@ section h2::after {
     color: white;
 }
 
+
 /*footer*/
 footer {
     background-color: #909090;
@@ -454,130 +464,314 @@ footer {
     font-size: 0.875rem;
 }
 
-/* Media Queries for Responsiveness */
+
+/*Responsive - Media queries*/
 @media (max-width: 992px) {
     nav .left a {
-        font-size: 1.25rem;
+      font-size: 1.25rem;
     }
-
+  
     nav .right a {
-        font-size: 1rem;
-        margin: 0 0.5rem;
+      font-size: 1rem;
+      margin: 0 0.5rem;
     }
-
-    #about-section .headshot img {
-        width: 18rem;
-    }
-
-    #projects-section .project-box {
-        flex: 0 0 14rem; /* Adjust width for smaller screens */
-    }
-
-    #skills-section i {
-        font-size: 2.5rem;
-    }
-}
-
-@media (max-width: 768px) {
-    nav .left a {
-        font-size: 1.25rem;
-    }
-
-    nav .right a {
-        font-size: 1.1rem;
-        margin: 0 0.375rem;
-    }
-
-    #about-section .headshot img {
-        width: 16rem;
-    }
-
-    #projects-section .project-box {
-        flex: 0 0 14rem;
-    }
-
-    #skills-section i {
-        font-size: 2rem;
-    }
-
-    #skills-section .hard-skills-container {
-        gap: 1.25rem;
-     }
-}
-
-@media (max-width: 576px) {
-    nav {
-        padding: 0 1rem;
-    }
-
-    nav .left a {
-        font-size: 1.1rem;
-    }
-
-    nav .right a {
-        font-size: 0.8rem;
-        margin: 0 0.25rem;
-    }
-
-    #about-section .social-links {
-        font-size: 1.75rem;
-    }
-
+  
     #about-section h2 {
-        font-size: 2.4rem;
+      font-size: 2.5rem;
     }
-
+  
+    #about-section .bio p {
+      font-size: 1.1rem;
+    }
+  
+    #about-section .social-links {
+      font-size: 2rem;
+    }
+  
     #about-section .headshot img {
-        width: 12rem;
+      width: 18rem;
+    }
+  
+    h2 {
+      font-size: 2.25rem;
+    }
+  
+    #projects-section h3,
+    #skills-section h3 {
+      font-size: 1.25rem;
+    }
+  
+    #projects-section .projects-scroll-container {
+      flex-direction: row;
+      overflow-x: auto;
+      gap: 1rem;
+    }
+  
+    #projects-section .project-box {
+      flex: 0 0 70%;
+      max-width: 70%;
+      margin: 0 0.5rem;
+    }
+  
+    #skills-section i {
+      font-size: 2rem;
+    }
+  
+    #skills-section > div,
+    #course-section > div:first-of-type,
+    #analysis-section > div:first-of-type {
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+    }
+  
+    .experiences-types,
+    .analysis-types {
+      flex: 1 1 100%;
+    }
+  
+    #course-section h2 {
+      font-size: 2rem;
+    }
+  
+    #course-section .an-experience p {
+      margin: 0.25rem 0;
+    }
+  
+    #course-section .an-experience p:first-of-type {
+      font-size: 1.5rem;
+    }
+  
+    #course-section .an-experience p:nth-of-type(2) {
+      font-size: 1.25rem;
+    }
+  
+    #course-section .an-experience p:nth-of-type(3) {
+      font-size: 1.1rem;
+    }
+  
+    #course-section .an-experience p:last-of-type {
+      font-size: 0.95rem;
+    }
+  
+    #analysis-section .analysis-types i {
+      font-size: 3.5rem;
+    }
+  
+    #analysis-section .analysis-types p:first-of-type {
+      font-size: 1.4rem;
+    }
+  
+    #analysis-section .analysis-types a {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    nav .right a {
+      font-size: 1.1rem;
+      margin: 0 0.375rem;
+    }
+  
+    #about-section h2 {
+      font-size: 2.25rem;
+    }
+  
+    #about-section .bio p {
+      font-size: 1rem;
+    }
+  
+    #about-section .social-links {
+      font-size: 1.75rem;
+    }
+  
+    #about-section .headshot img {
+      width: 16rem;
+    }
+  
+    h2 {
+      font-size: 2rem;
+    }
+  
+    #projects-section h3,
+    #skills-section h3 {
+      font-size: 1.1rem;
+    }
+  
+    #skills-section i {
+      font-size: 1.75rem;
+    }
+  
+    #skills-section .hard-skills-container {
+      gap: 1.25rem;
+    }
+  
+    #skills-section > div,
+    #course-section > div:first-of-type,
+    #analysis-section > div:first-of-type {
+      gap: 1.5rem;
+    }
+  
+    #course-section h2 {
+      font-size: 1.75rem;
+    }
+  
+    #course-section .experiences-types i {
+      font-size: 3.5rem;
+    }
+  
+    #course-section .an-experience p:first-of-type {
+      font-size: 1.4rem;
+    }
+  
+    #course-section .an-experience p:nth-of-type(2) {
+      font-size: 1.2rem;
+    }
+  
+    #course-section .an-experience p:nth-of-type(3) {
+      font-size: 1rem;
+    }
+  
+    #course-section .an-experience p:last-of-type {
+      font-size: 0.85rem;
+    }
+  
+    #analysis-section .analysis-types i {
+      font-size: 3rem;
+    }
+  
+    #analysis-section .analysis-types p:first-of-type {
+      font-size: 1.25rem;
+    }
+  
+    #analysis-section .analysis-types a {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+
+    nav {
+      padding: 0 1rem;
+    }
+  
+    nav .left a {
+      font-size: 1.1rem;
+    }
+  
+    nav .right a {
+      font-size: 0.8rem;
+      margin: 0 0.25rem;
+    }
+  
+    section {
+      padding: 4rem 1rem;
+    }
+  
+    #about-section h2 {
+      font-size: 2rem;
+    }
+  
+    #about-section .bio p {
+      font-size: 0.9rem;
+    }
+  
+    #about-section .social-links {
+      font-size: 1.5rem;
+    }
+  
+    #about-section .headshot img {
+      width: 12rem;
+    }
+  
+    h2 {
+      font-size: 1.75rem;
+    }
+  
+    #projects-section h3 {
+      font-size: 1rem;
     }
 
     #projects-section .project-box {
-        flex: 0 0 14rem;
+        flex: 0 0 90%;
+        max-width: 90%;
     }
-
+  
     #skills-section i {
-        font-size: 1.5rem;
+      font-size: 2rem;
     }
-
-    #skills-section .hard-skills-container {
-       gap: 1rem;
+  
+    #skills-section > div,
+    #course-section > div:first-of-type,
+    #analysis-section > div:first-of-type {
+      gap: 1rem;
     }
-
-    section {
-        padding: 6rem 1rem; /* Adjust padding for smaller screens */
+  
+    #course-section h2 {
+      font-size: 1.5rem;
     }
-
-    #projects-section {
-        padding: 6rem 1rem; /* Adjust padding for smaller screens */
+  
+    #course-section .experiences-types i {
+      font-size: 3rem;
     }
-}
+  
+    #course-section .an-experience p:first-of-type {
+      font-size: 1.25rem;
+    }
+  
+    #course-section .an-experience p:nth-of-type(2) {
+      font-size: 1.1rem;
+    }
+  
+    #course-section .an-experience p:nth-of-type(3) {
+      font-size: 0.95rem;
+    }
+  
+    #course-section .an-experience p:last-of-type {
+      font-size: 0.8rem;
+    }
+  
+    #analysis-section .analysis-types i {
+      font-size: 2.5rem;
+    }
+  
+    #analysis-section .analysis-types p:first-of-type {
+      font-size: 1.1rem;
+    }
+  
+    #analysis-section .analysis-types a {
+      font-size: 0.9rem;
+    }
+  }
+  
 
  /*Trainée du curseur*/
-#about-section {
-    position: relative;
-}
+ @media (min-width: 1024px) { /*Only on desktop*/
+    #about-section {
+        position: relative;
+    }
 
-.custom-cursor {
-    position: absolute;
-    pointer-events: none;
-    width: 30px;
-    height: 30px;
-    background-image: url('/assets/icons/star.png');
-    background-repeat: no-repeat;
-    background-size: 30px 30px;
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    pointer-events: none;
-    transition: opacity 0.3s ease-out;
-}
-
-@keyframes cursor-trail {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
+    .custom-cursor {
+        position: absolute;
+        pointer-events: none;
+        width: 30px;
+        height: 30px;
+        background-image: url('/assets/icons/star.png');
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        transform: translate(-50%, -50%);
         opacity: 1;
+        pointer-events: none;
+        transition: opacity 0.3s ease-out;
     }
-    100% {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 0;
+    @keyframes cursor-trail {
+        0% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(0.5);
+            opacity: 0;
+        }
     }
-}
+ }
