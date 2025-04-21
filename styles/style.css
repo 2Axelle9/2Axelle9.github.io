@@ -683,9 +683,9 @@ footer {
     #about-section .headshot img {
       width: 12rem;
     }
-  
-    h2 {
-      font-size: 1.75rem;
+
+    #projects-section  h2 {
+        font-size: 1.5rem;
     }
   
     #projects-section h3 {
@@ -695,6 +695,10 @@ footer {
     #projects-section .project-box {
         flex: 0 0 90%;
         max-width: 90%;
+    }
+
+    #skills-section  h2 {
+        font-size: 1.5rem;
     }
   
     #skills-section i {
@@ -729,6 +733,10 @@ footer {
   
     #course-section .an-experience p:last-of-type {
       font-size: 0.8rem;
+    }
+
+    #analysis-section h2 {
+        font-size: 1.5rem;
     }
   
     #analysis-section .analysis-types i {
